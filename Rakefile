@@ -4,7 +4,7 @@ TARGET  = "abp.dylib"
 SOURCES = "ABetterPlace.m ABPNaiiveSwizzler.m ABPTweetScore.m"
 
 task :run => [:build] do
-	system("DYLD_INSERT_LIBRARIES=./build/#{TARGET} /Applications/Tweetbot.app/Contents/MacOS/Tweetbot")
+	system("DYLD_INSERT_LIBRARIES=./build/#{TARGET} /Applications/Tweetbot.app/Contents/MacOS/Tweetbot &")
 end
 
 task :build do
