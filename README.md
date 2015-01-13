@@ -23,6 +23,11 @@ $ rake clean
 $ rake
 ```
 
+
+## In case of emergency  
+
+Just quit the app and launch original Tweetbot.  
+
 ## Credits  
 
 Original idea by @Jonty: [`abetterplace`](https://github.com/Jonty/abetterplace).  
