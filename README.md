@@ -6,7 +6,9 @@ This Tweetbot «plugin» is nothing, but a huge set of dirty and unstable hacks.
 Don't use it (^^,).
 
 ## Usage  
-   
+
+Quit `Tweetbot.app` if it was launched and do the following:  
+     
 ```bash
 $ git clone https://github.com/rodionovd/ABetterPlaceForTweetbot.git
 $ cd ./ABetterPlaceForTweetbot
