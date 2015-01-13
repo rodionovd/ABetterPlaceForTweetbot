@@ -21,9 +21,14 @@ static NSDictionary *AllTheScores = nil;
 
 	NSLinguisticTaggerOptions options =
 		NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation;
-	NSLinguisticTagger *tagger =
-		[[NSLinguisticTagger alloc] initWithTagSchemes: @[NSLinguisticTagSchemeTokenType]
-		                                       options: options];
+
+	static NSLinguisticTagger *tagger = nil;
+	static dispatch_once_t taggerToken;
+	dispatch_once(&taggerToken, ^{
+		tagger = [[NSLinguisticTagger alloc] initWithTagSchemes: @[NSLinguisticTagSchemeTokenType]
+		                                                options: options];
+	});
+
 	tagger.string = tweet;
 	__block NSInteger score = 0;
 	[tagger enumerateTagsInRange: NSMakeRange(0, [tweet length])
